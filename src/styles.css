@@ -1,0 +1,681 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,500;0,600;0,700;0,800;1,100;1,500;1,600;1,700&display=swap');
+
+
+html {
+    background-image: url('/background.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    color: #000;
+    font-family: 'Dancing Script';
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    z-index: 50;
+    background-color: #4f6fad;
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.navbar-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2rem;
+    gap: 2rem;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar-title {
+    position: relative;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+
+.navbar-icon {
+    position: relative;
+    width: 3.2rem;
+    height: 3.2rem;
+    margin-top: -3em;
+    margin-left: 1rem;
+
+}
+
+.nav-item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2rem;
+    gap: 2rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-item:hover {
+    color: #f28986;
+    transform: scale(1.25);
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-item:active {
+    transform: scale(0.75);
+    transition: all 0.3s ease-in-out;
+}
+
+.link-active {
+    color: #f28986;
+}
+
+.log-btn {
+    position: absolute;
+    top: .3rem;
+    right: 3rem;
+    color: #f28986;
+    background-color: none;
+}
+
+.log-btn:hover {
+    color: #fff;
+    transform: scale(1.25);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.app-title {
+    margin-top: 2em;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3em;
+    font-weight: 700;
+    color: #4f6fad;
+    text-shadow: 1px 1px 1px #f7f7f7,
+        1px 2px 1px #f7f7f7,
+        1px 3px 1px #f7f7f7,
+        1px 4px 1px #f7f7f7,
+        1px 5px 1px #f7f7f7,
+        1px 6px 1px #f7f7f7,
+        1px 7px 1px #f7f7f7,
+        1px 8px 1px #f7f7f7,
+        1px 9px 1px #f7f7f7,
+        1px 10px 1px #f7f7f7,
+        1px 18px 6px rgba(16, 16, 16, 0.4),
+        1px 22px 10px rgba(16, 16, 16, 0.2),
+        1px 25px 35px rgba(16, 16, 16, 0.2),
+        1px 30px 60px rgba(16, 16, 16, 0.4);
+}
+
+.container {
+    width: 100%;
+}
+
+.breed-container {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 1rem;
+    gap: 1.5rem;
+}
+
+.breed-card {
+    width: 20rem;
+    height: 20rem;
+    background-image: url('/Bg-image.jpg');
+    background-size: contain;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    display: flex;
+    flex-direction: column;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.breed-name {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    position: relative;
+    margin-left: 1rem;
+}
+
+.image-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+}
+
+.breed-image {
+    width: 98%;
+    height: 100%;
+
+    position: relative;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+    margin-top: 8px;
+}
+
+.noImage-text {
+    position: absolute;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    margin-top: 5rem;
+    margin-left: 1rem;
+}
+
+.sub-breeds-container {
+    display: none;
+    color: white;
+    font-weight: bold;
+
+}
+
+.breed-card:hover .sub-breeds-container {
+    position: absolute;
+    top: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+    transition: background-color 0.3s ease;
+
+}
+
+.sub-breeds-list {
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.sub-breeds-item {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 1rem;
+
+}
+
+.table-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    justify-content: center;
+    margin: 0px 10px;
+    gap: 1rem;
+}
+
+.dogs-table--container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.filter-container {
+    width: 98%;
+    height: 5rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: .5rem;
+    gap: 2rem;
+}
+
+.table-input {
+    background-color: #f6f6f6;
+    padding: .5rem;
+    width: 16rem;
+    border-radius: 10px;
+    border-color: #4f6fad;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.table-select {
+    background-color: #f6f6f6;
+    padding: .5rem;
+    width: 16rem;
+    border-radius: 10px;
+    border-color: #4f6fad;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.table-input::placeholder {
+    color: black;
+}
+
+.dogs-table {
+    width: 98%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 0;
+    background-color: #4f6fad;
+    opacity: 90%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    border-radius: 10px;
+    color: white;
+    margin-bottom: 5rem;
+
+}
+
+.dogs-table--body {
+    text-align: center;
+    position: relative;
+}
+
+th {
+    border-bottom: 1px solid gray;
+    border-radius: 20px;
+    font-size: 1.4rem;
+    color: #f28986;
+}
+
+td {
+    border-bottom: 1px solid gray;
+    border-radius: 20px;
+}
+
+td:last-child {
+    border-bottom: none;
+}
+
+tr {
+    border-bottom: 1px solid gray;
+    font-size: 1.2rem;
+}
+
+tr:last-child {
+    border-bottom: none;
+}
+
+.btn-del {
+    position: absolute;
+    background-color: #f28986;
+    border-radius: 10px;
+    border-color: #4f6fad;
+    color: white;
+    right: .2rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-del:hover {
+    background-color: #f6f6f6;
+    color: #f28986;
+    transition: background-color 0.3s ease;
+}
+
+
+.form-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.form-container img {
+    width: 6rem;
+}
+
+.form-login--box {
+    background-color: #4f6fad;
+    width: 30rem;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    color: white;
+}
+
+.box-item {
+    width: 86%;
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+}
+
+.test-box {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.box-item:last-child {
+    margin: none;
+}
+
+.box-item input {
+    padding: .5rem;
+    border-radius: 10px;
+    border-color: #4f6fad;
+    background-color: #f6f6f6;
+}
+
+.form-button {
+    width: 10rem;
+    height: 3rem;
+    background-color: #f28986;
+    border-radius: 10px;
+    border-color: #4f6fad;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+    background-color: #f6f6f6;
+    color: #f28986;
+    transition: background-color 0.3s ease;
+}
+
+.test-span {
+    color: #f28986;
+}
+
+.text-link {
+    color: white;
+    margin-top: -10px;
+}
+
+.box-name {
+    display: flex;
+    gap: 1rem;
+}
+
+.form-createDog--box {
+    background-color: #4f6fad;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.form-textarea {
+    height: 4rem;
+}
+
+.error {
+    color: #f28986;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.menu-toggle {
+    display: none;
+
+}
+
+
+/* estilos para moviles */
+
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        height: 5rem;
+        position: none;
+    }
+
+    .navbar-logo {
+        margin-top: 1rem;
+    }
+
+    .navbar-title {
+        margin-top: 0;
+    }
+
+    .navbar-links {
+        display: none;
+    }
+
+    .menu-toggle {
+        position: absolute;
+        display: flex;
+        right: 3rem;
+        top: 1rem;
+    }
+
+    .menu-toggle i {
+        font-size: 2rem;
+        color: #fff;
+    }
+
+    .menu-toggle i:hover {
+        color: #f28986;
+        cursor: pointer;
+    }
+
+    .navbar-icon {
+        width: 2rem;
+        height: 2rem;
+        margin-top: -1.5em;
+        margin-left: 1rem;
+    }
+
+    .breed-container {
+        width: 100%;
+        margin-top: 10rem;
+    }
+
+    .breed-name {
+        font-size: 1.5rem;
+    }
+
+    .image-container {
+        width: 100%;
+        height: 100%;
+    }
+
+    .breed-image {
+        width: 100%;
+        height: 100%;
+    }
+
+    .noImage-text {
+        font-size: 1rem;
+    }
+
+    .sub-breeds-container {
+        width: 100%;
+        height: 100%;
+    }
+
+    .sub-breeds-list {
+        width: 100%;
+        height: 100%;
+    }
+
+    .sub-breeds-item {
+        font-size: 1.5rem;
+    }
+
+    .table-container {
+        flex-direction: column;
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .dogs-table--container {
+        width: 96%;
+        margin: 0 auto;
+    }
+
+    .filter-container {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+
+    .table-input {
+        width: 100%;
+    }
+
+    .table-select {
+        width: 100%;
+    }
+
+    .dogs-table {
+        width: 100%;
+        margin: 0;
+    }
+
+    .dogs-table--body {
+        width: 100%;
+        margin: 0;
+    }
+
+
+
+    .form-container {
+        width: 100%;
+        height: auto;
+        margin-top: 10rem;
+    }
+
+    .form-createDog--box {
+        margin-top: -7rem;
+        width: 90%;
+        margin-bottom: 7rem;
+    }
+
+    .breed-container {
+        margin-top: -1rem;
+    }
+
+    .form-login--box {
+        width: 100%;
+        height: 100%;
+    }
+
+    .error {
+        font-size: 10px;
+    }
+
+    .box-label {
+        font-size: 1.2rem;
+    }
+
+    .form-button {
+        font-size: 1.2rem;
+    }
+
+
+}
+
+@media screen and (max-width: 400px) {
+    .app-title {
+        margin-top: 6rem;
+        font-size: 1.8rem;
+    }
+}
+
+/* Estilos base para el div */
+.menu-form {
+    width: 300px; /* Equivalente a w-64 en Tailwind */
+    height: 300px; /* Equivalente a h-[150px] en Tailwind */
+    background-color: rgba(0, 0, 0, 0.7); /* Equivalente a bg-black/80 en Tailwind */
+    border-radius: 0.375rem; /* Equivalente a rounded-lg en Tailwind */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Equivalente a shadow-md en Tailwind */
+    margin-top: 3.5rem; /* Equivalente a mt-14 en Tailwind */
+    position: fixed; /* Equivalente a relative en Tailwind */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    overflow: hidden;
+    z-index: 50;
+  }
+
+  .menu-form a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+
+  /* Efecto de desenfoque de fondo */
+  .menu-form::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(8px); /* Equivalente a backdrop-blur-md en Tailwind */
+  }
+  
+  /* Estilos para el diseño flex */
+  .menu-form {
+    display: flex; /* Equivalente a flex en Tailwind */
+    flex-direction: column; /* Equivalente a flex-col en Tailwind */
+  }
